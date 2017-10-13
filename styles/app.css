@@ -1,0 +1,191 @@
+body {
+	font-family: sans-serif;
+	margin: 0;
+	width: 100%;
+	position: absolute;
+	height: 100%;
+}
+
+.container {
+	width: 100%;
+	height: 100%;
+}
+
+.floatLeft {
+	float: left;
+}
+
+.floatRight {
+	float: right;
+}
+
+.spanFull {
+	width: 100%;
+}
+
+.spanHalf {
+	width: 50%;
+}
+
+.span10p {
+	width: 10%;
+}
+
+.span20p {
+	width: 20%;
+}
+
+.span30p {
+	width: 30%;
+}
+
+.span40p {
+	width: 40%;
+}
+
+.span60p {
+	width: 60%;
+}
+
+.span70p {
+	width: 70%;
+}
+
+.span80p {
+	width: 80%;
+}
+
+.span90p {
+	width: 90%;
+}
+
+.height20 {
+	height: 20px;
+}
+
+.heightM20 {
+	height: calc(100% - 20px);
+}
+
+.textCenter {
+	text-align: center;
+}
+
+svg {
+	width: 100%;
+	height: 100%;
+	float: left;
+}
+
+.positionTL {
+	top: 0;
+	left: 0;
+	position: absolute;
+}
+
+.positionTR {
+	top: 0;
+	right: 0;
+	position: absolute;
+}
+
+.subText {
+	color: DDD;
+	font-size: 11px
+}
+
+.pad5 {
+	padding: 5px;
+}
+
+.metroHome {
+	width: 26px;
+	height: 26px;
+	background-image: url(../img/assessments/home.png);
+	background-repeat: no-repeat;
+	background-color: transparent;
+	border: 0;
+	cursor: pointer;
+	transition: transform .3s;
+	float: left;
+}
+
+.metroHome:hover{
+	transform: scale(0.9);
+}
+
+.metroHome:active{
+	transform: scale(1);
+}
+
+.crumbs {
+	position: relative;
+	padding-right: 15px;
+	height: 26px;
+	color: #CCC;
+	background: none;
+	border: none;
+	font-size: 11px;
+	float: left;
+	cursor: pointer;
+	transition: color .3s;
+}
+
+.crumbs:hover {
+	color: #333;
+}
+
+.crumbs:last-child {
+	color: blue;
+	cursor: auto;
+}
+
+.crumbs:active {
+	outline: 0;
+	border: 0;
+	color: #F5F5F5;
+}
+
+.crumbs:focus, .metroHome:focus {
+	outline: 0;
+	border: 0;
+}
+
+.crumbs:after {
+	content: ">";
+	position: absolute;
+	top: 5px;
+	right: 0;
+	font-size: 14px;
+}
+
+.crumbs:last-child:after {
+	display: none;
+}
+
+.displayFlex {
+	display: flex;
+}
+
+.displayNone {
+	display: none;
+}
+
+.dropDown {
+	width: auto;
+	background: #FFF;
+	border: 1px solid #333;
+	height: 20px;
+	transition: box-shadow .3s;
+	border-radius: 3px;
+	cursor: pointer;
+	font-size: 10px;
+}
+
+.boxShadowHover:hover {
+	box-shadow: 0px 0px 3px #000;
+}
+
+select:focus {
+	outline: 0;
+}

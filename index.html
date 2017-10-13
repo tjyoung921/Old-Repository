@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>BD E2E Metro Maps</title>
+<link rel="stylesheet" href="styles/app.css">
+<script type="text/javascript" src="scripts/lib/d3.v4.min.js"></script>
+<script type="text/javascript" src="scripts/lib/jquery.min.js"></script>
+<script type="text/javascript" src="scripts/drillModels.js"></script>
+<script type="text/javascript" src="scripts/autoAssessments.js"></script>
+<script type="text/javascript" src="scripts/contentsNAssessments.js"></script>
+<script type="text/javascript" src="scripts/useCases.js"></script>
+<script type="text/javascript" src="scripts/mapModels.js"></script>
+<script type="text/javascript" src="scripts/mainModels.js"></script>
+<script type="text/javascript" src="scripts/flows.js"></script>
+<script type="text/javascript" src="scripts/legends.js"></script>
+<script type="text/javascript" src="scripts/drilledViews.js"></script>
+<script type="text/javascript" src="scripts/canvas.js"></script>
+<script type="text/javascript" src="scripts/app.js"></script>
+
+</head>
+<body>
+	<div class="container floatLeft">
+		<div class="positionTL subText pad5" id="breadCrumbs"></div>
+		<div class="positionTR pad5">
+		<select class="dropDown boxShadowHover displayNone" id="viewSelector">
+			<!--  <option value="deployments">Deployments View</option>
+			<option value="opportunities">Opportunities View</option>-->
+		</select>
+		<input type="file" id="uploadFile" hidden/>
+		</div>
+		<div class="container floatLeft" id="mapContainer"></div>
+	</div>
+</body>
+</html>
