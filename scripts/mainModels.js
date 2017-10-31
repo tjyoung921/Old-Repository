@@ -322,6 +322,7 @@ var RecordToReportModel = function() {
 		node : "start",
 		angle: -90,
 		stepLength: 70,
+		drillStepLength: 150,
 		levels : []
 	}, {
 		name : "Reporting",
@@ -331,12 +332,14 @@ var RecordToReportModel = function() {
 		assessments: procureToPayAssessments("tbd"),
 		angle: -75,
 		stepLength: 70,
+		drillStepLength: 150,
 		levels : reportingLevels(),
 	}, {
 		name : "Consolidation",
 		align: "right",
 		node : "end",
 		angle: -75,
+		drillStepLength: 150,
 		stepLength: 70,
 		levels : consolidationLevels()
 	}, {
@@ -344,6 +347,7 @@ var RecordToReportModel = function() {
 		align: "right",
 		node : "end",
 		angle: -50,
+		drillStepLength: 150,
 		stepLength: 70,
 		levels : internetCompanyLevels(),
 		contents: branchContentView("RecordToReport")
@@ -353,6 +357,7 @@ var RecordToReportModel = function() {
 		node : "end",
 		assessments: procureToPayAssessments("tbd"),
 		angle: -50,
+		drillStepLength: 150,
 		stepLength: 70,
 		levels : accountingReconcilliationsLevels(),
 	},{
@@ -360,6 +365,7 @@ var RecordToReportModel = function() {
 		align: "right",
 		node : "end",
 		angle: -60,
+		drillStepLength: 150,
 		stepLength: 70,
 		levels : closingJourneyEntriesLevels(),
 	},{
@@ -368,12 +374,14 @@ var RecordToReportModel = function() {
 		flowDirection: "backward",
 		node : "end",
 		angle: -90,
+		drillStepLength: 150,
 		stepLength: 70,
 		levels : gLSubledgerMaintenanceLevels(),
 	},{
 		name : "Accounting Policy Maintenance",
 		align: "right",
 		node : "end",
+		drillStepLength: 150,
 		assessments: procureToPayAssessments("tbd"),
 		levels : accountingPolicyMaintenanceLevels(),
 		end: "end"
@@ -535,7 +543,8 @@ var HireToRetireModel = function() {
 		name : "",
 		align: "right",
 		node : "start",
-		stepLength: 50,
+		stepLength: 70,
+		drillStepLength: 150,
 		wrapLength: 200,
 		angle: -90,
 		levels : []
@@ -545,7 +554,8 @@ var HireToRetireModel = function() {
 		node : "end",
 		flowDirection: "forward",
 		assessments: procureToPayAssessments("tbd"),
-		stepLength: 50,
+		stepLength: 70,
+		drillStepLength: 150,
 		wrapLength: 200,
 		angle: -90,
 		levels : extentOfferCultivateAcceptanceHRLevels()
@@ -554,8 +564,9 @@ var HireToRetireModel = function() {
 		align: "right",
 		flowDirection: "forward",
 		node : "end",
-		stepLength: 50,
+		stepLength: 70,
 		wrapLength: 200,
+		drillStepLength: 150,
 		angle: -90,
 		levels : payrollTABenifitsSetupLevels(),
 	}, {
@@ -563,6 +574,7 @@ var HireToRetireModel = function() {
 		align: "right",
 		node : "end",
 		angle: -50,
+		drillStepLength: 150,
 		wrapLength: 200,
 		assessments: procureToPayAssessments("tbd"),
 		levels : goalsObjectiveLevels()
@@ -571,6 +583,8 @@ var HireToRetireModel = function() {
 		align: "up",
 		wrapLength: 150,
 		node : "end",
+		stepLength: 100,
+		drillStepLength: 150,
 		angle: -360,
 		levels : performanceSuccessionMangementLevels(),
 	}, {
@@ -579,6 +593,8 @@ var HireToRetireModel = function() {
 		node : "end",
 		angle: -360,
 		wrapLength: 130,
+		stepLength: 100,
+		drillStepLength: 150,
 		assessments: procureToPayAssessments("tbd"),
 		levels : learningAndDevelopmentLevels(),
 		contents: branchContentView("HireToRetire")
@@ -587,19 +603,25 @@ var HireToRetireModel = function() {
 		align: "up",
 		node : "end",
 		angle: -360,
+		stepLength: 100,
 		wrapLength: 130,
+		drillStepLength: 150,
 		levels : engagementCommunicationsLevels(),
 	},{
 		name : "Retirement and Re-employment Policy",
 		align: "down",
 		node : "end",
+		stepLength: 100,
 		wrapLength: 130,
+		drillStepLength: 150,
 		angle: -360,
 		levels : retirementReemploymentPolicyLevels(),
 	},{
 		name : "Retirement and Separations",
 		align: "up",
 		node : "end",
+		drillStepLength: 150,
+		stepLength: 100,
 		processTitle: {name: "Hire To Retire", x: 20, y: 20, angle: -360},
 		angle: -360,
 		levels : retirementSeparationsLevels()
