@@ -124,7 +124,7 @@ gradient.append("stop").attr("offset", "100%").attr("stop-color",
 				name: "Admin Rights with Amelia",
 				description: "Users can place requests with Cognitive chat bot to obtain Administrator Rights to their computer and recived access to install applications",
 				successRate: "95%",
-				noOfRequests: "TBD"
+				noOfRequests: "2750"
 		}
 		createAmeliaUseCaseExtendedView(options, {clientX: d3.event.clientX, clientY: d3.event.clientY, pos: pos, offsetY: 30});
 	});
@@ -142,7 +142,7 @@ gradient.append("stop").attr("offset", "100%").attr("stop-color",
 				name: "USB Privileges with Amelia",
 				description: "Users can place requests to obtain USB Privileges through Cognitive chat bot and recieve access to use a removeable drive for data transfer",
 				successRate: "93%",
-				noOfRequests: "TBD"
+				noOfRequests: "1835"
 		}
 		createAmeliaUseCaseExtendedView(options, {clientX: d3.event.clientX, clientY: d3.event.clientY, pos: pos, offsetY: 100});
 	});
@@ -160,7 +160,7 @@ gradient.append("stop").attr("offset", "100%").attr("stop-color",
 				name: "Guest WiFi with Amelia",
 				description: "Users can place requests for guest wireless access using cognitive chat bot and recive credentials nearly instantly",
 				successRate: "91%",
-				noOfRequests: "TBD"
+				noOfRequests: "4499"
 		}
 		createAmeliaUseCaseExtendedView(options, {clientX: d3.event.clientX, clientY: d3.event.clientY, pos: pos, offsetY: 170});
 	});	
@@ -226,6 +226,6 @@ function createAmeliaUseCaseExtendedView(options, ePos){
 	wrapG.append("image").attr("width",	"20px").attr("height","20px").attr("x",  120).attr("y", 5)
 	.attr("xlink:href",	"img/assessments/right.png");
 
-	wrapG.append("text").attr("x", containerWidth - 80).attr("y", 20).style("font-size","14px").text(options.noOfRequests).style("fill","#f12724").style("font-style", "italic");
+	wrapG.append("text").attr("x", containerWidth - 80).attr("y", 20).style("font-size","14px").text(options.noOfRequests).style("fill","#575757");
 	
 }

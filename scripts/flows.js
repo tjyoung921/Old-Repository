@@ -108,9 +108,17 @@ function createBranch(model) {
 															.parse(JSON
 																	.stringify(model)));
 												} else {
-													openFileExplorer();
+													d3.event.stopPropagation();
+													if (step.node !== "start" && !step.linkStart) {
+														var options = {};
+														options.step = step;
+														options.dom = getDom();
+														options.features = getFeatureOptions(step);
+														options.pos = [d3.event.x, d3.event.y];
+														createContextMenu(options);
+												}	
 												}
-											});
+											})
 						}
 
 						text.transition(nodeTransition).style("fill-opacity",
@@ -267,9 +275,19 @@ function createBranch(model) {
 													"fill-opacity",
 													step.opacity ? step.opacity
 															: 1);
-										}).on("click", function() {
-									openFileExplorer();
-								});
+										}).on(
+										"click",
+										function() {
+											d3.event.stopPropagation();
+											if (step.node !== "start" && !step.linkStart) {
+												var options = {};
+												options.step = step;
+												options.dom = getDom();
+												options.features = getFeatureOptions(step);
+												options.pos = [d3.event.x, d3.event.y];
+												createContextMenu(options);
+										}														
+										});
 								circle.transition(nodeTransition).style("fill",
 										"#FFF").style("stroke",
 										step.link.stroke).style("stroke-width",

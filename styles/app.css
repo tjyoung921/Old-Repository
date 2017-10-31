@@ -110,11 +110,11 @@ svg {
 	float: left;
 }
 
-.metroHome:hover{
+.metroHome:hover {
 	transform: scale(0.9);
 }
 
-.metroHome:active{
+.metroHome:active {
 	transform: scale(1);
 }
 
@@ -175,7 +175,7 @@ svg {
 	width: auto;
 	background: #FFF;
 	border: 1px solid #333;
-	height: 20px;
+	height: 25px;
 	transition: box-shadow .3s;
 	border-radius: 3px;
 	cursor: pointer;
@@ -186,6 +186,62 @@ svg {
 	box-shadow: 0px 0px 3px #000;
 }
 
-select:focus {
+select:focus, button:focus {
 	outline: 0;
+}
+
+.contextMenu {
+	width: auto;
+	height: auto;
+	position: absolute;
+	background: #3f849e;
+	padding: 0 5px;
+	color: #FFF;
+	border-radius: 4px;
+	box-shadow: 1px 1px 4px #000;
+}
+
+.customList {
+	font-size: 12px;
+	padding: 0;
+	cursor: pointer;
+	margin: 5px 0;
+}
+
+.customList li {
+	list-style: none;
+	padding: 0px 5px;
+	height: 25px;
+	line-height: 2;
+	transition: all .3s;
+	border-radius: 3px;
+}
+
+.customList li:hover {
+	background: #326a80;
+}
+
+.customList li span, button span {
+	padding-left: 10px;
+}
+
+.arrowUp:before {
+	position: absolute;
+	content: '';
+	top: -7px;
+	left: 2px;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid #3f849e;
+	width: 0;
+}
+
+.arrowR:before {
+	left: 80%;
+}
+
+.fA:before {
+	font-family: FontAwesome;
 }
