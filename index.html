@@ -4,6 +4,20 @@
 <meta charset="ISO-8859-1">
 <title>BD E2E Metro Maps</title>
 <link rel="stylesheet" href="styles/app.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<div class="container floatLeft">
+		<div class="positionTL subText pad5" id="breadCrumbs"></div>
+		<div class="positionTR pad5">
+		<button class="dropDown boxShadowHover fA fa-desktop" id="showViewSelector" 
+		onclick="showViewSelector(event)" data-view="map" data-page="higherView"><span id="view">Map View</span></button>
+		
+		<input type="file" id="uploadFile" hidden/>
+		</div>
+		<div class="container floatLeft" id="mapContainer"></div>
+	</div>
+	
 <script type="text/javascript" src="scripts/lib/d3.v4.min.js"></script>
 <script type="text/javascript" src="scripts/lib/jquery.min.js"></script>
 <script type="text/javascript" src="scripts/drillModels.js"></script>
@@ -17,19 +31,6 @@
 <script type="text/javascript" src="scripts/drilledViews.js"></script>
 <script type="text/javascript" src="scripts/canvas.js"></script>
 <script type="text/javascript" src="scripts/app.js"></script>
-
-</head>
-<body>
-	<div class="container floatLeft">
-		<div class="positionTL subText pad5" id="breadCrumbs"></div>
-		<div class="positionTR pad5">
-		<select class="dropDown boxShadowHover displayNone" id="viewSelector">
-			<!--  <option value="deployments">Deployments View</option>
-			<option value="opportunities">Opportunities View</option>-->
-		</select>
-		<input type="file" id="uploadFile" hidden/>
-		</div>
-		<div class="container floatLeft" id="mapContainer"></div>
-	</div>
+<script type="text/javascript" src="scripts/contextMenu.js"></script>
 </body>
 </html>
