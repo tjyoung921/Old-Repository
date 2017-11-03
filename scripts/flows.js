@@ -115,6 +115,7 @@ function createBranch(model) {
 														options.dom = getDom();
 														options.features = getFeatureOptions(step);
 														options.pos = [d3.event.x, d3.event.y];
+														options.arrowPos = "arrowUp"
 														createContextMenu(options);
 												}	
 												}
@@ -285,6 +286,7 @@ function createBranch(model) {
 												options.dom = getDom();
 												options.features = getFeatureOptions(step);
 												options.pos = [d3.event.x, d3.event.y];
+												options.arrowPos = "arrowUp"
 												createContextMenu(options);
 										}														
 										});
@@ -457,8 +459,14 @@ function getAlignmentPos(step) {
 	switch (step.align) {
 	case "down":
 		return {
-			x : step.link.x1 - 40,
+			x : step.link.x1 - 45,
 			y : step.link.y1 + 20
+		};
+		break;
+	case "downC":
+		return {
+			x : step.link.x1 - 30,
+			y : step.link.y1 + 25
 		};
 		break;
 	case "up":
@@ -475,7 +483,7 @@ function getAlignmentPos(step) {
 		break;
 	case "right":
 		return {
-			x : step.link.x1 + 10,
+			x : step.link.x1 + 15,
 			y : step.link.y1 + 5
 		};
 		break;
@@ -485,10 +493,28 @@ function getAlignmentPos(step) {
 			y : step.link.y1 + 10
 		};
 		break;
+	case "downleft":
+		return {
+			x : step.link.x1 - 100,
+			y : step.link.y1 + 10
+		};
+		break;
+	case "upleft":
+		return {
+			x : step.link.x1 - 100,
+			y : step.link.y1 - 30
+		};
+		break;
 	case "upright":
 		return {
+			x : step.link.x1 + 15,
+			y : step.link.y1 - 15
+		};
+		break;
+	case "upr":
+		return {
 			x : step.link.x1 + 10,
-			y : step.link.y1 - 10
+			y : step.link.y1 - 30
 		};
 		break;
 	}

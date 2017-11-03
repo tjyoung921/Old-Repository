@@ -1,5 +1,4 @@
 var createLegends = function() {
-	// console.log("colors: ", colors);
 	var mapContainer = d3.select("div#mapContainer");
 	var svg = mapContainer.select("svg");
 	var flowCanvas = svg.select("g#flowCanvas");
@@ -8,13 +7,26 @@ var createLegends = function() {
 	var svgHeight = dom.height();
 	flowCanvas.select("g#legends").remove();
 	var view = setViewSelector();
-
+	var page = setViewSelector("page");
+	
+	var pos = {};
+	var crumbs = bCrumbs();
+	var model = crumbs[crumbs.length - 1].model;
+	model = model[0] ? model[0] : model;
+	 if(page === "higherView"){		 
+		 pos = getAlignmentPos(model.p2pObject[4]);
+		 pos.y = pos.y + 100;
+	 }else{
+		 pos = getAlignmentPos(model.p2pObject[0]);
+		 pos.x = pos.x - 50;
+		 pos.y = pos.y + 300;
+	 }
 	var gLegend = flowCanvas.append("g").attr("transform",
-			"translate(" + 20 + ", " + (svgHeight - 50) + ")").attr("id",
+			"translate(" + pos.x + ", " + pos.y + ")").attr("id",
 			"legends");
 
 	var counter = 0, gap = 15, stokeWidth = "10px", legendMargin = 20, gId;
-//	console.log("view: ", view);
+	console.log("view: ", view);
 	switch(view){
 	case "opportunities": 
 		var legends = getAssessmentAttributes();

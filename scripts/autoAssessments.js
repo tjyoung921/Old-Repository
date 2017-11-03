@@ -59,7 +59,7 @@ var QuoteToCashAssessments = function(step) {
 	var assessments = {
 			customerSetup : {
 			link : {
-				angle : -110,
+				angle : -90,
 				stepLength : 180,
 			},
 			assessObj : [ {
@@ -75,8 +75,8 @@ var QuoteToCashAssessments = function(step) {
 		},
 		creditPricingQuote : {
 			link : {
-				angle : -90,
-				stepLength : 300,
+				angle : -50,
+				stepLength : 235,
 			},
 			assessObj : [ {
 				name : "RPA",
@@ -91,8 +91,8 @@ var QuoteToCashAssessments = function(step) {
 		},
 		contractAdministration: {
 			link : {
-				angle : -250,
-				stepLength : 300,
+				angle : -230,
+				stepLength : 200,
 			},
 			assessObj : [ {
 				name : "RPA",
@@ -108,7 +108,7 @@ var QuoteToCashAssessments = function(step) {
 		orderManagement: {
 			link : {
 				angle : -270,
-				stepLength : 30,
+				stepLength : 150,
 			},
 			assessObj : [ {
 				name : "RPA",
@@ -123,8 +123,8 @@ var QuoteToCashAssessments = function(step) {
 		},
 		billing : {
 			link : {
-				angle : -110,
-				stepLength : 180,
+				angle : -60,
+				stepLength : 200,
 			},
 			assessObj : [ {
 				name : "RPA",
@@ -139,8 +139,8 @@ var QuoteToCashAssessments = function(step) {
 		},
 		cashApplication : {
 			link : {
-				angle : -60,
-				stepLength : 200,
+				angle : -280,
+				stepLength : 150,
 			},
 			assessObj : [ {
 				name : "RPA",
@@ -155,8 +155,8 @@ var QuoteToCashAssessments = function(step) {
 		},
 		collectionsDisputeManagement: {
 			link : {
-				angle : -320,
-				stepLength : 300,
+				angle : -50,
+				stepLength : 220,
 			},
 			assessObj : [ {
 				name : "RPA",
@@ -350,8 +350,8 @@ var planToForecastAssessments = function(step) {
 		},
 		financialPlanning : {
 			link : {
-				angle : -80,
-				stepLength : 250,
+				angle : -70,
+				stepLength : 180,
 			},
 			assessObj : [ {
 				name : "RPA",
@@ -367,7 +367,7 @@ var planToForecastAssessments = function(step) {
 		capitalPlanning: {
 			link : {
 				angle : -250,
-				stepLength : 300,
+				stepLength : 180,
 			},
 			assessObj : [ {
 				name : "RPA",
@@ -383,7 +383,7 @@ var planToForecastAssessments = function(step) {
 		performanceManagement: {
 			link : {
 				angle : -300,
-				stepLength : 200,
+				stepLength : 180,
 			},
 			assessObj : [ {
 				name : "MachineLearning",
@@ -415,7 +415,7 @@ var planToForecastAssessments = function(step) {
 		businessAnalytics : {
 			link : {
 				angle : -70,
-				stepLength : 200,
+				stepLength : 180,
 			},
 			assessObj : [ {
 				name : "RPA",
