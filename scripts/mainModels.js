@@ -82,7 +82,7 @@ var ProcureToPayModel = function() {
 	var startPos = {x: nodePosition.x - 3, y: nodePosition.y + 120};
 	var p2pObject = [ {
 		name : "Category Strategy",
-		align: "down",
+		align: "downC",
 		node : "start",
 		startPos: startPos,
 		flowDirection: "forward",
@@ -159,9 +159,10 @@ var PlanToDeliveryModel = function() {
 		linked : [ProductLineManagementModel()]
 	}, {
 		name : "Production/Sourcing Execution",
-		align: "left",
+		align: "downleft",
 		node : "end",
 		angle: -270,
+		wrapLength: 100,
 		drillStepLength: 150,
 		levels : productionSourcingExecutionLevels()
 	}, {
@@ -218,7 +219,8 @@ var ProductLineManagementModel = function() {
 		levels : materialCharacterizationLevels()
 	}, {
 		name : "Product and Process Change Management",
-		align: "left",
+		align: "right",
+		wrapLength: 80,
 		drillStepLength: 200,
 		node : "end",
 		angle: -270,
@@ -555,7 +557,7 @@ var HireToRetireModel = function() {
 		flowDirection: "forward",
 		assessments: procureToPayAssessments("tbd"),
 		stepLength: 70,
-		drillStepLength: 150,
+		drillStepLength: 220,
 		wrapLength: 200,
 		angle: -90,
 		levels : extentOfferCultivateAcceptanceHRLevels()
@@ -566,7 +568,7 @@ var HireToRetireModel = function() {
 		node : "end",
 		stepLength: 70,
 		wrapLength: 200,
-		drillStepLength: 150,
+		drillStepLength: 220,
 		angle: -90,
 		levels : payrollTABenifitsSetupLevels(),
 	}, {
@@ -804,9 +806,10 @@ var ITTransitionToOperationCIModel = function() {
 		contents: branchContentView("ITTransitionToOperationCI")
 	}, {
 		name : "Support Catalog and Transition Planning",
-		align: "left",
+		align: "downleft",
 		node : "end",
 		angle: -180,
+		wrapLength: 110,
 		levels : supportCatalogTransitionPlanningLevels(),
 		end: "end"
 	}];

@@ -63,8 +63,8 @@ function initCanvas() {
 	setViewSelector(true, "map", "higherView");
 	drawCenterNode(centerNodePosition());
 	var allModels = getMapModels();
-	createAllBranches(allModels);
-	bCrumbs("set", {name: "Metro Map E2E", model: allModels});	
+	bCrumbs("set", {name: "Metro Map E2E", model: allModels});
+	createAllBranches(allModels);		
 }
 
 function resetZoomPan(){
@@ -85,7 +85,7 @@ function drawCenterNode(nodePosition){
 	var flowCanvas = svg.select("g#flowCanvas");
 	var rectG = flowCanvas.append("g").attr("transform", "translate("+(nodePosition.x)+", "+(nodePosition.y)+")").attr("id", "centerNode");	
 	rectG.append("circle").attr("r", 80).attr("cx", 65).attr("cy", 80).style("fill", "#ececec").style("stroke", "#959595").style("stroke-width", "4px");
-	rectG.append("image").attr("x", "20").attr("y", "15").attr("width", "90px").style("filter", "url(#drop-shadow)")
+	rectG.append("image").attr("x", "20").attr("y", "15").attr("width", "90px")
 			.attr("height", "50px").attr("xlink:href", "img/nodes/connections.png");		
 	rectG.append("text").attr("x", "65").attr("y", "80").style("font-weight", "bold").style("font-size", "10px").style("text-anchor", "middle")
 	.text("Central Station Enterprise Strategy").call(wrap, 150);	
@@ -150,7 +150,8 @@ function drawCenterNode(nodePosition){
 	  options.features = getFeatureOptions({name: view});
 	  options.dom = dom.parent();
 	  options.pos = [-70,30];
-	  options.arrowPos = "arrowR";
+	  options.cssOptions = {right: 7 , bottom: 60};
+	  options.arrowPos = "arrowDown";
 	  createContextMenu(options);
   }  
   
@@ -163,6 +164,8 @@ function drawCenterNode(nodePosition){
 		  viewSelector.hide().attr("data-view", val).attr("data-page", page);
 	  }else if(state === undefined){
 		  return viewSelector.attr("data-view");
+	  }else if(state === "page"){
+		  return viewSelector.attr("data-page");
 	  }
   }
   

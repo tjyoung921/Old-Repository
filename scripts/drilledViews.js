@@ -45,7 +45,7 @@ function changePositionsForDrilledView(model, svgWidth, svgHeight) {
 
 	$.each(model.p2pObject, function(s, step) {
 		step.angle = -360;
-		step.align = s % 2 == 0 ? "up" : "down";
+		step.align = s == 0 ? "upr" : s % 2 == 0 ? "up" : "down";
 		step.drilled = true;
 		step.opacity = 1;
 		step.stepLength = step.drillStepLength ? step.drillStepLength : step.stepLength;
@@ -61,7 +61,7 @@ function changePositionsForDrilledView(model, svgWidth, svgHeight) {
 							p2pObject.opacity = 0.5;
 							p2pObject.drilled = true;
 							if(i === 0){
-								p2pObject.align = step.align;
+								p2pObject.align = "upr";
 								p2pObject.stepLength = p2pObject.drillStepLength ? p2pObject.drillStepLength : 160;
 								p2pObject.startPos = {
 									x : step.link.x1,
@@ -70,6 +70,7 @@ function changePositionsForDrilledView(model, svgWidth, svgHeight) {
 								p2pObject.angle = l % 2 == 0 ? -60: -300;						
 								p2pObject.linkStart = true;
 							}else{
+								p2pObject.stepLength = p2pObject.drillStepLength ? p2pObject.drillStepLength : 160;
 								p2pObject.align = i % 2 == 0 ? "up" : "down";
 								p2pObject.angle = -360;	
 							}
@@ -118,7 +119,7 @@ function createBreadCrumbsElements(){
 		var clickableBtn = $("<button/>", {
 			class: function(){
 				if(c === 0){
-					return "metroHome";
+					return "metroHome fA fa-home";
 				}
 				return "crumbs";				
 			},
@@ -136,8 +137,8 @@ function createBreadCrumbsElements(){
 					resetZoomPan();
 					setViewSelector(true, "map", "higherView");
 					drawCenterNode(centerNodePosition());
-					createAllBranches(crumb.model);
 					bCrumbs("remove", undefined,  (c + 1));
+					createAllBranches(crumb.model);					
 				}else{
 					createDrilledView(crumb.model);
 					bCrumbs("remove", undefined,  (c + 1));

@@ -372,12 +372,12 @@ var cashApplicationLevels = function() {
 	var level1 = [ {
 		name : "",
 		align : "up",
-		angle : -270,
+		angle : -90,
 		id: "cashAppLevel1_0",
 		levels : [],
 	}, {
 		name : "Receive cash",
-		align : "down",	
+		align : "up",	
 		id: "cashAppLevel1_2",
 		levels : [],
 		end : "end",
@@ -394,25 +394,25 @@ var collectionsAndDisputeManagementLevels = function() {
 	var level1 = [ {
 		name : "",
 		align : "right",
-		angle : -90,
+		angle : -270,
 		id: "cadLevel1_0",
 		levels : [],
 	}, {
 		name : "Pre-collections",
 		align : "right",
-		angle : -80,
+		angle : -280,
 		id: "cadLevel1_1",					
 		levels : [],
 	}, {
 		name : "Collection",
 		id: "cadLevel1_2",
 		align : "right",
-		angle : -80,	
+		angle : -280,	
 		levels : [],
 	}, {
 		name : "Manage disputes",
 		align : "right",
-		angle : -80,	
+		angle : -280,	
 		id: "cadLevel1_3",
 		levels : [],
 		end : "end",
@@ -459,7 +459,7 @@ var financialPlanningLevels = function() {
 		levels : [],
 	}, {
 		name : "Develop and maintain budget policies and procedures",
-		align : "left",
+		align : "upleft",
 		wrapLength: 130,
 		id: "fpLevel1_1",
 		levels : [],
@@ -561,14 +561,14 @@ var performanceManagementLevels = function() {
 		levels : [],
 	}, {
 		name : "Define performance metrics",
-		align : "left",
+		align : "right",
 		angle : -90,
 		id: "permManageLevel1_1",
 		wrapLength: 90,
 		levels : [],
 	}, {
 		name : "Evaluate and manage financial performance",
-		align : "left",
+		align : "up",
 		id: "permManageLevel1_2",
 		wrapLength: 130,
 		levels : [],
@@ -787,7 +787,7 @@ var assetUseMaintenanceRetirementLevels = function() {
 	var level1 = [ {
 		name : "",
 		align : "down",
-		angle : -30,
+		angle : -350,
 		stepLength: 200,
 		id: "aumrLevel1_0",
 		levels : [],
@@ -852,7 +852,8 @@ var consolidationLevels = function() {
 	var level1 = [ {
 		name : "",
 		align : "down",
-		angle : -270,
+		angle : -320,
+		stepLength: 150,
 		id: "consolidationLevel1_0",
 		levels : [],
 	}, {
@@ -1344,7 +1345,7 @@ var performanceSuccessionMangementLevels = function() {
 	var level2 = [ {
 		name : "",
 		align : "down",
-		angle : -80,
+		angle : -120,
 		id: "performanceSuccessionMangementLevel2_0",
 		stepLength: 150,
 		connectedTo: ["goalsObjectiveLevel1_0", "learningAndDevelopmentLevel2_0", "engagementCommunicationsLevel1_0"],
@@ -1395,7 +1396,7 @@ var learningAndDevelopmentLevels= function() {
 		name : "",
 		align : "down",
 		id: "learningAndDevelopmentLevel2_0",
-		angle : -60,		
+		angle : -90,		
 		levels : [],
 	}, {
 		name : "Manage promotion and demotion process",
@@ -1422,8 +1423,8 @@ var engagementCommunicationsLevels= function() {
 		name : "",
 		align : "down",
 		id: "engagementCommunicationsLevel1_0",
-		angle : -70,
-		stepLength: 200,
+		angle : -110,
+		stepLength: 180,
 		levels : [],
 	}, {
 		name : "Reward and retain employees",
@@ -1528,7 +1529,7 @@ var retirementSeparationsLevels = function(){
 		levels : [],
 	}, {
 		name : "Evaluate and track reason for leaving",
-		align : "down",
+		align : "right",
 		angle : -260,
 		id: "retirementSeparationsLevel2_1",
 		levels : [],
@@ -1651,7 +1652,7 @@ var defineITDesignBuildStandardsLevels= function() {
 		levels : [],
 	}, {
 		name : "Define IT desing and build standards",
-		align : "down",
+		align : "left",
 		id: "defineITDesignBuildStandardsLevel1_1",
 		angle : -300,
 		levels : [],
@@ -1781,11 +1782,11 @@ var applicationDevelopmentTestLevels= function() {
 		name : "",
 		id: "applicationDevelopmentTestLevel1_0",
 		align : "down",
-		angle : -60,
+		angle : -240,
 		levels : [],
 	}, {
 		name : "Programming",
-		align : "right",
+		align : "down",
 		angle : -60,
 		id: "applicationDevelopmentTestLevel1_1",
 		levels : [],
@@ -1859,7 +1860,7 @@ var incidentManagementContinuousImprovementLevels= function() {
 	var level2 = [ {
 		name : "",
 		align : "down",
-		angle : -230,
+		angle : -190,
 		levels : [],
 		id: "incidentManagementContinuousImprovementLevel2_0",
 	}, {
@@ -1886,7 +1887,8 @@ var applicationPerformanceManagementLevels= function() {
 	var level1 = [ {
 		name : "",
 		align : "down",
-		angle : -70,
+		angle : -110,
+		stepLength: 150,
 		levels : [],
 		id: "applicationPerformanceManagementLevel1_0",
 	}, {
@@ -1909,12 +1911,12 @@ var releaseAndDeploymentLevels= function() {
 	var level1 = [ {
 		name : "",
 		align : "down",
-		angle : -240,
+		angle : -120,
 		levels : [],
 		id: "releaseAndDeploymentLevel1_0",
 	}, {
 		name : "Plan and manage releases",
-		align : "down",
+		align : "up",
 		angle : -60,
 		levels : [],
 		id: "releaseAndDeploymentLevel1_1",
@@ -1924,12 +1926,12 @@ var releaseAndDeploymentLevels= function() {
 	var level2 = [ {
 		name : "",
 		align : "down",
-		angle : -270,
+		angle : -80,
 		levels : [],
 		id: "releaseAndDeploymentLevel2_0",
 	}, {
 		name : "Develop deployment strategy",
-		align : "down",
+		align : "up",
 		id: "releaseAndDeploymentLevel2_1",
 		angle : -120,
 		levels : [],
@@ -2189,7 +2191,7 @@ var frontEndIdeationInnovationLevels= function() {
 		id: "frontEndIdeationInnovationLevel1_0",
 	}, {
 		name : "Idea generation",
-		align : "down",
+		align : "right",
 		angle : -280,
 		id: "frontEndIdeationInnovationLevel1_1",
 		levels : [],
@@ -2280,19 +2282,21 @@ var demandSensingLevels= function() {
 	var level1 = [ {
 		name : "",
 		align : "down",
-		angle : -260,
+		angle : -270,
 		id: "demandSensingLevel1_0",
 		levels : [],
 	}, {
 		name : "Develop forecast",
 		align : "left",
 		angle : -280,
+		stepLength: 70,
 		levels : [],
 		id: "demandSensingLevel1_1",
 	}, {
 		name : "Monitor activity against forecast",
 		align : "down",
-		angle : -190,
+		angle : -180,
+		stepLength: 120,
 		id: "demandSensingLevel1_2",
 		levels : [],
 	}, {
@@ -2342,7 +2346,7 @@ var supplyNetworkPlanningLevels= function() {
 		id: "supplyNetworkPlanningLevel2_0",
 	}, {
 		name : "Develop production and materials plan",
-		align : "up",
+		align : "upright",
 		angle : -50,
 		id: "supplyNetworkPlanningLevel2_1",
 		levels : [],
@@ -2482,18 +2486,18 @@ var inboundLogisticsWarehousingLevels= function() {
 	}, {
 		name : "Plan and manage inbound material flow",
 		align : "left",
-		angle : -80,
+		angle : -30,
 		levels : [],
 		id: "inboundLogisticsWarehousingLevel1_1",
 	}, {
 		name : "Recieve deliverables",
-		align : "left",
+		align : "downright",
 		angle : -10,
 		levels : [],
 		id: "inboundLogisticsWarehousingLevel1_2",
 	}, {
 		name : "Track and manage inventory",
-		align : "down",
+		align : "downright",
 		angle : -0,
 		levels : [],
 		id: "inboundLogisticsWarehousingLevel1_3",
@@ -2584,7 +2588,7 @@ var productProcessChangeManagementLevels= function() {
 	var level1 = [ {
 		name : "",
 		align : "down",
-		angle : -110,
+		angle : -130,
 		id: "productProcessChangeManagementLevel1_0",
 		levels : [],
 	}, {
@@ -2607,7 +2611,7 @@ var productLifeCycleMangementLevels= function() {
 		name : "",
 		align : "down",
 		id: "productLifeCycleMangementLevel1_0",
-		angle : -100,
+		angle : -110,
 		stepLength: 200,
 		levels : [],
 	}, {
@@ -2671,11 +2675,12 @@ var productProfitabilityLevels= function() {
 		name : "",
 		align : "down",
 		angle : -270,
+		stepLength: 70,
 		id: "productProfitabilityLevel1_0",
 		levels : [],
 	}, {
 		name : "Evaluate profitability",
-		align : "down",
+		align : "left",
 		angle : -270,
 		id: "productProfitabilityLevel1_1",
 		levels : [],
