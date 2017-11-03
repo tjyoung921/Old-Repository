@@ -100,16 +100,24 @@ var getStepAttributes = function(stepName, options) {
 	}
 }
 
+//function getDimensionScale(){
+//	var standard  = {w: 1366, h: 662};
+//	var scale = window.innerWidth / standard.w;
+//	return scale;	
+//}
 
 var  generateProgressiveLinkPosition = function(p2pObject, stepName, startPos, flowDir){	
 	var dom = getDom();
 	var objLen = p2pObject.length;
 //	var stepLength = flowDir == "left" ? Math.abs(startPos.x - 0)/objLen : Math.abs(startPos.x - dom.width())/objLen;
 	var stepLength = 100;
+//	var scale = getDimensionScale();
+//	console.log("scale: ", scale);
 	var options = {}, newPoint, x1, y1;
 	for ( var p = 0 ; p < p2pObject.length ; p++) {
 		p2pObject[p].angle = p2pObject[p].angle ? p2pObject[p].angle : 0;
 		stepLength = p2pObject[p].stepLength ? p2pObject[p].stepLength: stepLength;
+//		stepLength = stepLength * scale;
 		if(p2pObject[p].startPos){
 			x1 = startPos.x, y1 = startPos.y;		
 		}else{

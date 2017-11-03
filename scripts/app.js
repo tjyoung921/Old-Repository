@@ -1,31 +1,31 @@
 $(document).ready(function() {
 	initCanvas();
 
-	$("select#viewSelector").on("change", function(event) {
-		// console.log("change");
-		var view = event.target.value;
-		createLegends();
-		switch (view) {
-		case "opportunities":
-			createAssessments(true);
-			createUseCaseView(false);
-			break;
-		case "deployments":
-			createAssessments(false);
-			createUseCaseView(false);
-			break;
-		case "useCase":
-			createUseCaseView(true);
-			createAssessments(false);
-			break;
-		case "map":
-			createContentView(false);
-			break;
-		case "content":
-			createContentView(true);
-			break;
-		}
-	})
+//	$("select#viewSelector").on("change", function(event) {
+//		// console.log("change");
+//		var view = event.target.value;
+//		createLegends();
+//		switch (view) {
+//		case "opportunities":
+//			createAssessments(true);
+//			createUseCaseView(false);
+//			break;
+//		case "deployments":
+//			createAssessments(false);
+//			createUseCaseView(false);
+//			break;
+//		case "useCase":
+//			createUseCaseView(true);
+//			createAssessments(false);
+//			break;
+//		case "map":
+//			createContentView(false);
+//			break;
+//		case "content":
+//			createContentView(true);
+//			break;
+//		}
+//	})
 });
 
 function openFileExplorer() {

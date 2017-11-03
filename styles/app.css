@@ -59,12 +59,37 @@ body {
 	width: 90%;
 }
 
+.height100pc {
+	height: 100%;
+}
+
 .height20 {
 	height: 20px;
 }
 
 .heightM20 {
 	height: calc(100% - 20px);
+}
+
+
+.height30 {
+	height: 30px;
+}
+
+.heightM30 {
+	height: calc(100% - 30px);
+}
+
+.height40 {
+	height: 40px;
+}
+
+.height50 {
+	height: 50px;
+}
+
+.heightM50 {
+	height: calc(100% - 50px);
 }
 
 .textCenter {
@@ -89,6 +114,10 @@ svg {
 	position: absolute;
 }
 
+.positionRelative{
+	position: relative;
+}
+
 .subText {
 	color: DDD;
 	font-size: 11px
@@ -99,15 +128,14 @@ svg {
 }
 
 .metroHome {
-	width: 26px;
-	height: 26px;
-	background-image: url(../img/assessments/home.png);
-	background-repeat: no-repeat;
-	background-color: transparent;
-	border: 0;
-	cursor: pointer;
-	transition: transform .3s;
-	float: left;
+	    height: 100%;
+    background: #edeff5;
+    border: 0;
+    cursor: pointer;
+    transition: transform .3s;
+    float: left;
+    color: #6674d4;
+    font-size: 30px;
 }
 
 .metroHome:hover {
@@ -120,15 +148,15 @@ svg {
 
 .crumbs {
 	position: relative;
-	padding-right: 15px;
-	height: 26px;
-	color: #CCC;
-	background: none;
-	border: none;
-	font-size: 11px;
-	float: left;
-	cursor: pointer;
-	transition: color .3s;
+    padding-right: 15px;
+    height: 100%;
+    color: #CCC;
+    background: none;
+    border: none;
+    font-size: 12px;
+    float: left;
+    cursor: pointer;
+    transition: color .3s;
 }
 
 .crumbs:hover {
@@ -154,9 +182,9 @@ svg {
 .crumbs:after {
 	content: ">";
 	position: absolute;
-	top: 5px;
+	top: 11px;
 	right: 0;
-	font-size: 14px;
+	font-size: 15px;
 }
 
 .crumbs:last-child:after {
@@ -172,14 +200,14 @@ svg {
 }
 
 .dropDown {
-	width: auto;
+	width: 150px;
 	background: #FFF;
 	border: 1px solid #333;
-	height: 25px;
+	height: 100%;
 	transition: box-shadow .3s;
 	border-radius: 3px;
 	cursor: pointer;
-	font-size: 10px;
+	font-size: 12px;
 }
 
 .boxShadowHover:hover {
@@ -191,7 +219,7 @@ select:focus, button:focus {
 }
 
 .contextMenu {
-	width: auto;
+	width: max-content;
 	height: auto;
 	position: absolute;
 	background: #3f849e;
@@ -202,7 +230,7 @@ select:focus, button:focus {
 }
 
 .customList {
-	font-size: 12px;
+	font-size: 14px;
 	padding: 0;
 	cursor: pointer;
 	margin: 5px 0;
@@ -210,9 +238,9 @@ select:focus, button:focus {
 
 .customList li {
 	list-style: none;
-	padding: 0px 5px;
-	height: 25px;
-	line-height: 2;
+	padding: 0px 10px;
+	height: 35px;
+	line-height: 2.5;
 	transition: all .3s;
 	border-radius: 3px;
 }
@@ -238,10 +266,28 @@ select:focus, button:focus {
 	width: 0;
 }
 
+
+.arrowDown:before {
+	position: absolute;
+	content: '';
+	bottom: -7px;
+	left: 2px;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 10px solid #3f849e;
+	width: 0;
+}
+
 .arrowR:before {
 	left: 80%;
 }
 
 .fA:before {
 	font-family: FontAwesome;
+}
+
+.boxShadowTop{
+  box-shadow: 0 -5px 5px -5px #333;
 }

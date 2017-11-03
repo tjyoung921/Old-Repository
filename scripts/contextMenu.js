@@ -8,7 +8,7 @@ function createContextMenu(options){
 			
 		var container = $("<div/>", {
 			id: "contextMenu",
-			class: "contextMenu arrowUp "+options.arrowPos
+			class: "contextMenu "+options.arrowPos
 		})
 		
 		var ul = $("<ul/>", {
@@ -32,7 +32,10 @@ function createContextMenu(options){
 		console.log("pos: ", pos);
 		console.log("container.width(): ",container.width());
 		console.log("container.height(): ",container.height());
-		
+		var cssOptions;	
+		if(options.cssOptions){
+			cssOptions = options.cssOptions;	
+		}else{		
 		if((pos.x + container.width()) > window.innerWidth){
 			pos.x = pos.x - container.width();
 			container.addClass("arrowR");
@@ -40,8 +43,11 @@ function createContextMenu(options){
 		
 		if((pos.y + container.height()) > window.innerHeight){
 			pos.y = pos.y - container.height();
-		}		
-		container.css({left: pos.x , top: pos.y});
+		}
+		cssOptions = {left: pos.x , top: pos.y};	
+		}
+			
+		container.css(cssOptions);
 		svg.on("click", function(){
 			createContextMenu(false);
 		});
@@ -57,16 +63,19 @@ function getFeatureOptions(step){
 				createAssessments(false);
 				createUseCaseView(false);
 				setViewSelector(true, "deployments", "drilled");
+				createLegends();
 			}},
 			{name: "Opportunities View", icon: "fa-file-photo-o", propFnc: function(){
 				createAssessments(true);
 				createUseCaseView(false);
 				setViewSelector(true, "opportunities", "drilled");
+				createLegends();
 			}},
 			{name: "Use Case View", icon: "fa-circle-o-notch", propFnc: function(){
 				createUseCaseView(true);
 				createAssessments(false);
 				setViewSelector(true, "useCase", "drilled");
+				createLegends();
 			}}
 		];		
 	}else if(step.name === "higherView"){
@@ -75,10 +84,12 @@ function getFeatureOptions(step){
 			{name: "Map View", icon: "fa-line-chart", propFnc: function(){
 				createContentView(false);
 				setViewSelector(true, "map", "higherView");
+				createLegends();
 			}},
 			{name: "Content View", icon: "fa-file-text", propFnc: function(){
 				createContentView(true);
-				setViewSelector(true, "content", "higherView");			
+				setViewSelector(true, "content", "higherView");	
+				createLegends();		
 			}}
 		];
 	}else{		
